@@ -26,14 +26,15 @@
 }
 
 /* Title */
-.title {
+.footerBg .title {
   color: #fff;
   font-family: "Abril Fatface";
   font-size: 5rem;
   font-weight: 400;
   margin: 0 5%;
-  padding-top: 5rem;
+  padding: 5rem 0;
   background: none;
+  /* border: #fff 1px solid; */
 }
 
 /* Footer Content */

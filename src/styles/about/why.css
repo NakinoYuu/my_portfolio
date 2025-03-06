@@ -1,3 +1,59 @@
-p {
+.aboutWyhBg {
+  width: 100%;
+  height: auto;
+  margin-top: 30rem;
+}
+@media screen and (max-width: 768px) {
+  .aboutWyhBg {
+    margin-top: 10rem;
+  }
+}
+
+.whyContent {
+  width: 85%;
+  margin: 0 auto;
+}
+.titleWrapper {
+  display: flex;
+  margin-bottom: 8rem;
+  /* border: #fff 1px solid; */
+}
+.circle {
+  width: 3rem;
+  height: 3rem;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #28a9ff 0%,
+    rgba(40, 169, 255, 0.7) 33%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  margin-top: 2rem;
+}
+.titleStatement {
+  margin-left: 1.5rem;
+}
+.titleStatement .why {
+  /* border: #fff 1px solid; */
   color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 5rem;
+  font-weight: 400;
+}
+.titleStatement .meaning {
+  color: #fff;
+  font-family: "Kaisei Decol";
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.reason p {
+  color: #fff;
+  font-family: "Kaisei Decol";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: 0.1rem;
+}
+.reason span {
+  font-size: 2.6rem;
 }

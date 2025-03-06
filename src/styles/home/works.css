@@ -3,7 +3,7 @@
   background-image: url("/bgImg/Galaxy.jpg");
   /* ↑は仮置き画像 */
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   position: relative;
 }
 
@@ -34,7 +34,11 @@
     rgba(9, 6, 17, 1) 100%
   );
 }
-
+@media screen and (max-width: 1280px) {
+  .worksBg {
+    height: 120vh;
+  }
+}
 .title {
   color: #fff;
   font-family: "Abril Fatface", sans-serif;
