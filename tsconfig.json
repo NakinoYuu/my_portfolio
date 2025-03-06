@@ -18,10 +18,23 @@
         "name": "next"
       }
     ],
+    "baseUrl": "src", // baseUrl を "src" に設定
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"] // このように設定
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/page.tsx",
+    "src/app/layout.jsx",
+    "src/app/index/Page.jsx",
+    "src/app/index/page.jsx",
+    "src/app/about/aboutParts/page.jsx",
+    "src/app/about/page.jsx",
+    "src/app/about/aboutParts/aboutWhy.jsx"
+  ],
   "exclude": ["node_modules"]
 }

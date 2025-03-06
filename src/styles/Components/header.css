@@ -1,0 +1,88 @@
+.logo {
+  background-image: url("/partImg/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 7rem;
+  height: 7rem;
+  margin-top: 4.5rem;
+  margin-left: 3rem;
+  background-color: rgba(255, 255, 255, 0);
+  position: fixed;
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 7rem;
+    height: 7rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+}
+
+.navigationBar {
+  display: flex;
+  padding-top: 4.5rem;
+  margin-right: 3rem;
+  background: none;
+  position: fixed;
+  right: 0;
+  z-index: 10;
+  background: none;
+}
+@media screen and (max-width: 768px) {
+  .navigationBar {
+    flex-flow: column;
+    align-items: center;
+    padding-top: 3rem;
+    margin-right: 2rem;
+  }
+}
+.works,
+.about,
+.contact {
+  background: none;
+}
+.about,
+.contact {
+  margin-left: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .about,
+  .contact {
+    margin: 0;
+    margin-top: 1rem;
+  }
+}
+
+.rhombusShape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7.7rem;
+  height: 9.6rem;
+  background-image: url("/partImg/rhombusShape.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0);
+}
+@media screen and (max-width: 768px) {
+  .rhombusShape {
+    background: none;
+    width: 7rem;
+    height: 3rem;
+    border: #fff 1px solid;
+    border-radius: 3rem;
+  }
+}
+.headerTitle {
+  background: none;
+}
+button {
+  color: #fff;
+  border: none;
+  font-family: "Abril Fatface";
+  font-size: 1.4rem;
+  font-weight: 400;
+  cursor: pointer;
+  background: none;
+}

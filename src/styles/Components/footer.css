@@ -1,0 +1,199 @@
+/* Footer Background */
+.footerBg {
+  width: 100%;
+  margin-top: 45rem;
+  height: 50.6rem;
+  background-image: url("/bgImg/Galaxy.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Gradient overlay */
+.footerBg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 6, 17, 1) 0%,
+    rgba(9, 6, 17, 0) 100%
+  );
+}
+
+/* Title */
+.title {
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 0 5%;
+  padding-top: 5rem;
+  background: none;
+}
+
+/* Footer Content */
+.footerContent {
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 10%;
+  background: none;
+}
+
+.footerContent .gap {
+  width: 12.1rem;
+  background: none;
+}
+
+.detailsWrapper {
+  width: 88rem;
+  background: none;
+}
+
+.detailsWrapper .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background: none;
+}
+
+/* Email */
+.eMail {
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: -2rem;
+  background: none;
+}
+
+/* Star Image */
+.starImg {
+  background-image: url("/partImg/starLine.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  width: 46.6054rem;
+  height: 6.5rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* Comment */
+.comment {
+  color: #fff;
+  font-family: "Kaisei Decol";
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  background: none;
+}
+
+/* Copyright */
+.copyright {
+  width: 80%;
+  max-width: 88rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: #fff 0.5px solid;
+  margin-bottom: 1.5rem;
+  background: none;
+}
+
+.copyright p {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #fff;
+  font-family: "Yu Mincho StdN";
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: none;
+}
+
+/* Link Wrapper */
+.linkWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+}
+
+.contentLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: none;
+}
+.footerLink {
+  background: none;
+}
+/* To Top Content */
+.toTopContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none; /* 親要素の背景を消す */
+  background-color: transparent; /* 背景を透明に */
+  mix-blend-mode: screen; /* ブレンドモードを適用 */
+}
+
+/* To Top Button */
+.toTop {
+  background-image: url("/partImg/toTop.png"); /* 背景画像をそのまま使用 */
+  width: 12rem;
+  height: 13rem;
+  background-color: transparent; /* 背景色を透明に */
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  margin-top: 2rem;
+} /* Media Queries */
+
+/* For screen width up to 768px */
+@media screen and (max-width: 768px) {
+  .starImg {
+    background-image: none;
+    height: 1.5rem;
+  }
+
+  .linkWrapper {
+    margin-top: 3%;
+  }
+
+  .toTopContent {
+    margin-top: 5rem;
+  }
+
+  .toTop {
+    width: 8rem;
+    height: 9rem;
+  }
+}
+
+/* For screen width up to 1410px */
+@media screen and (max-width: 1410px) {
+  .linkWrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .footerContent .gap {
+    display: none;
+  }
+
+  .copyright {
+    margin-top: 2rem;
+  }
+}

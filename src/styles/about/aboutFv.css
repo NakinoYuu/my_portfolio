@@ -1,0 +1,149 @@
+.aboutFvBg {
+  background-image: url("/bgImg/Galaxy.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.aboutFvBg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 6, 17, 0) 0%,
+    rgba(9, 6, 17, 1) 100%
+  );
+}
+@media screen and (max-width: 1280px) {
+  .aboutFvBg {
+    height: 120vh;
+  }
+}
+
+.aboutFvContent {
+  /* border: #fff 1px solid; */
+  width: 85%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0);
+}
+.aboutFvBg h1 {
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 5rem;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0);
+  padding-top: 15rem;
+}
+@media screen and (max-width: 768px) {
+  .aboutFvBg h1 {
+    font-size: 4rem;
+    padding-top: 10rem;
+  }
+}
+
+.selfIntroductionWrapper {
+  /* border: #fff 1px solid; */
+
+  display: flex;
+  flex-wrap: wrap;
+  background: none;
+  margin-top: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .selfIntroductionWrapper {
+    margin-top: 3rem;
+  }
+}
+
+.myPictureWrapper {
+  /* border: #fff 1px solid; */
+  position: relative;
+  background: none;
+  margin: 0 auto;
+  width: 42rem;
+  height: 43rem;
+}
+
+.myPicture {
+  background-image: url("/partImg/myPicture.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 34rem;
+  height: 42rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+.mbti {
+  background-image: url("/partImg/mbti.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  right: 0rem;
+  bottom: 0rem;
+  background-color: rgba(255, 255, 255, 0);
+}
+@media screen and (max-width: 768px) {
+  .myPictureWrapper {
+    width: 38rem;
+    height: 38rem;
+  }
+  .myPicture {
+    height: 37rem;
+  }
+  .mbti {
+    width: 13rem;
+    height: 13rem;
+  }
+}
+
+.sentenceWrapper {
+  margin: 0 5%;
+  width: 55.8rem;
+  background: none;
+}
+
+.sentenceWrapper p {
+  background-color: rgba(255, 255, 255, 0);
+  color: #fff;
+  font-family: "Kaisei Decol";
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+}
+.sentenceWrapper .RomaAlphabet {
+  font-size: 1.4rem;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.sentenceWrapper .ChineseCharacters {
+  font-size: 3.6rem;
+  margin-bottom: 5rem;
+  margin-left: -0.5rem;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 768px) {
+  .sentenceWrapper {
+    margin-top: 10%;
+  }
+  .sentenceWrapper p {
+    font-size: 1.4rem;
+  }
+  .sentenceWrapper .RomaAlphabet {
+    font-size: 1.2rem;
+  }
+  .sentenceWrapper .ChineseCharacters {
+    margin-bottom: 2rem;
+    font-size: 3.4rem;
+  }
+}
