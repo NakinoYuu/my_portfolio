@@ -1,0 +1,226 @@
+.aboutLikesBg {
+  width: 100%;
+  height: auto;
+  margin-top: 30rem;
+  /* border: #fff 1px solid; */
+}
+@media screen and (max-width: 768px) {
+  .aboutLikesBg {
+    margin-top: 5rem;
+  }
+}
+
+.likesContent {
+  width: 85%;
+  margin: 0 auto;
+}
+.titleWrapper3 {
+  display: flex;
+  margin-bottom: 7rem;
+  margin-left: -4%;
+  /* border: #fff 1px solid; */
+}
+.circle {
+  width: 3rem;
+  height: 3rem;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #28a9ff 0%,
+    rgba(40, 169, 255, 0.7) 33%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .circle {
+    margin-top: 1.4rem;
+  }
+}
+
+.titleStatement {
+  margin-left: 1.5rem;
+}
+
+.titleStatement .likes {
+  /* border: #fff 1px solid; */
+  color: #fff;
+  font-family: "Abril Fatface";
+  font-size: 5rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .titleStatement .likes {
+    font-size: 4rem;
+  }
+  .titleStatement .meaning {
+    font-size: 1.2rem;
+  }
+}
+.titleStatement .meaning {
+  color: #fff;
+  font-family: "Kaisei Decol";
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* 好きなもの紹介 */
+.likesDetails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 85%;
+  height: auto;
+  margin: 0 auto;
+}
+.textDetailsWrapper p {
+  background-color: rgba(255, 255, 255, 0);
+}
+/* 初期状態 (PC: 3列) */
+.trip,
+.eating,
+.cafe,
+.selfNail,
+.family,
+.karaoke {
+  position: relative;
+  width: calc(33.333% - 20px);
+  max-width: 40rem;
+}
+
+/* 画像エリア */
+.tripImg,
+.eatingImg,
+.cafeImg,
+.selfNailImg,
+.familyImg,
+.karaokeImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 27rem;
+}
+.tripImg {
+  background-image: url("/aboutImg/trip.jpg");
+  background-position: top;
+}
+.eatingImg {
+  background-image: url("/aboutImg/eating.jpg");
+}
+.cafeImg {
+  background-image: url("/aboutImg/cafe.jpg");
+}
+.selfNailImg {
+  background-image: url("/aboutImg/selfNail.jpg");
+}
+.familyImg {
+  background-image: url("/aboutImg/family.jpg");
+}
+.karaokeImg {
+  background-image: url("/aboutImg/Karaoke.jpg");
+  background-position: bottom;
+}
+
+/* 1235px以下では2列に変更 */
+@media screen and (max-width: 1235px) {
+  .trip,
+  .eating,
+  .cafe,
+  .selfNail,
+  .family,
+  .karaoke {
+    width: calc(50% - 20px);
+  }
+}
+
+/* 768px以下では1列に変更＆画像の下にテキストを表示 */
+@media screen and (max-width: 768px) {
+  .trip,
+  .eating,
+  .cafe,
+  .selfNail,
+  .family,
+  .karaoke {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10rem;
+  }
+
+  .textDetailsWrapper {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .likesTitle {
+    font-size: 1.8rem;
+    font-family: "Yu Mincho StdN";
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .detailsText {
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: "Yu Mincho StdN";
+    width: 90%;
+    line-height: 3rem;
+  }
+}
+
+/* 768px以上ではホバー時に表示 */
+@media screen and (min-width: 769px) {
+  .textDetailsWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+
+  .trip:hover .textDetailsWrapper,
+  .eating:hover .textDetailsWrapper,
+  .cafe:hover .textDetailsWrapper,
+  .selfNail:hover .textDetailsWrapper,
+  .family:hover .textDetailsWrapper,
+  .karaoke:hover .textDetailsWrapper {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .likesTitle,
+  .detailsText {
+    color: #fff;
+    width: 90%;
+  }
+
+  .likesTitle {
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: "Yu Mincho StdN";
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .detailsText {
+    font-size: 1.6rem;
+    font-family: "Yu Mincho StdN";
+    line-height: 3rem;
+  }
+}

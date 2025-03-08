@@ -16,8 +16,10 @@
 .titleWrapper {
   display: flex;
   margin-bottom: 8rem;
+  margin-left: -4%;
   /* border: #fff 1px solid; */
 }
+
 .circle {
   width: 3rem;
   height: 3rem;
@@ -28,6 +30,11 @@
     rgba(255, 255, 255, 0) 100%
   );
   margin-top: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .circle {
+    margin-top: 1.4rem;
+  }
 }
 .titleStatement {
   margin-left: 1.5rem;
@@ -46,6 +53,15 @@
   font-weight: 500;
   margin-top: 1rem;
 }
+@media screen and (max-width: 768px) {
+  .titleStatement .why {
+    font-size: 4rem;
+  }
+  .titleStatement .meaning {
+    font-size: 1.2rem;
+  }
+}
+
 .reason p {
   color: #fff;
   font-family: "Kaisei Decol";
@@ -56,4 +72,12 @@
 }
 .reason span {
   font-size: 2.6rem;
+}
+@media screen and (max-width: 768px) {
+  .reason p {
+    font-size: 1.6rem;
+  }
+  .reason span {
+    font-size: 2rem;
+  }
 }
