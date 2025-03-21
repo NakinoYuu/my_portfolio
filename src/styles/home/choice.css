@@ -19,6 +19,26 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.crewWrapper {
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+@media screen and (max-width: 1235px) {
+  .crewWrapper {
+    margin-bottom: 15%;
+  }
+}
+
+.crewWrapper p {
+  color: #fff;
+  font-family: "Kaisei Decol";
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-top: 6rem;
+  background-color: rgba(255, 255, 255, 0);
+}
 .crewA,
 .crewB,
 .crewC {
@@ -32,4 +52,34 @@
   margin: 5% 0;
   background-color: rgba(255, 255, 255, 0);
   z-index: 5;
+}
+.crewA:hover,
+.crewB:hover,
+.crewC:hover {
+  background-size: 75%;
+  transition: 0.3s ease-in;
+}
+.crewA {
+  /* border: #fff 1px solid; */
+
+  transform: rotate(-10deg);
+}
+@media screen and (max-width: 768px) {
+  .crewA {
+    margin-right: 10%;
+  }
+}
+
+.crewB {
+  /* イラスト入れる */
+}
+.crewC {
+  /* border: #fff 1px solid; */
+
+  transform: rotate(10deg);
+}
+@media screen and (max-width: 768px) {
+  .crewC {
+    margin-left: 3%;
+  }
 }

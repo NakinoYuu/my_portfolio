@@ -15,11 +15,13 @@ export default function AboutFv() {
           <div className="sentenceWrapper">
             <p className="RomaAlphabet">Yu　Nakano</p>
             <p className="ChineseCharacters">中野優</p>
-            <p>何かに没頭している時間と人と関わることが大好きな20歳です♪</p>
+            <p>何かに没頭している時間や、人と関わることが大好きな20歳です♪</p>
             <p>
               趣味は、セルフネイルやカラオケです。
-              ネイルは高校生の頃からはじめ、今では友達に施術することもあります。
-              カラオケは、1人で行くよりも友達と行く方が楽しいので好きです！
+              <br />
+              ネイルは高校生の頃からはじめ、今では友達に頼まれて、施術することもあります♪
+              <br />
+              カラオケは【楽しい！】を誰かと共有するのが好きなので、友達と一緒に行くことが多いです。
             </p>
           </div>
         </div>

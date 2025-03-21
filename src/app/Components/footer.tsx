@@ -29,7 +29,7 @@ export default function Footer() {
               </Link>
             </div>
             <div className="footerLink">
-              <Link href="/">
+              <Link href="/about/">
                 <button>About</button>
               </Link>
             </div>
@@ -41,6 +41,7 @@ export default function Footer() {
           </div>
           <div className="toTopContent">
             <Link href="/">
+              {/* メールがそのまま書けるようにする */}
               <button className="toTop">{/* ロケットの画像入れる */}</button>
             </Link>
           </div>

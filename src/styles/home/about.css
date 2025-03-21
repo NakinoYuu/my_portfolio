@@ -35,17 +35,21 @@
   background-repeat: no-repeat;
   width: 34.1rem;
   height: 44.9rem;
+  margin: 0 auto;
   /* border: #fff 1px solid; */
 }
-.aboutContent .gap {
-  width: 12rem;
-  height: 1rem;
-  /* border: #fff 1px solid; */
-}
+
 .selfIntroduction {
   margin: 10rem 0;
+  padding: 2rem 10rem;
   /* border: #fff 1px solid; */
 }
+@media screen and (max-width: 768px) {
+  .selfIntroduction {
+    padding: 0;
+  }
+}
+
 .selfIntroduction p {
   color: #fff;
   font-family: "Kaisei Decol";

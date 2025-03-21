@@ -5,7 +5,7 @@ export default function HomeBye() {
   return (
     <div className="byeBg">
       <p className="greeting">
-        そろそろ元の惑星に戻るお時間が来てしまいました…。それではまた！！
+        そろそろ元の惑星に戻るお時間が来てしまったみたいです…。ありがとうございました！
       </p>
     </div>
   );

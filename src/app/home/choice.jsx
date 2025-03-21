@@ -8,9 +8,18 @@ export default function HomeChoice() {
       <div className="characterSelect">
         {/* 線の背景characterSelectに画像入れる */}
         <div className="character">
-          <div className="crewA"></div>
-          <div className="crewB"></div>
-          <div className="crewC"></div>
+          <div className="crewWrapper">
+            <div className="crewA"></div>
+            <p>隊員A</p>
+          </div>
+          <div className="crewWrapper">
+            <div className="crewB"></div>
+            <p>隊員B</p>
+          </div>
+          <div className="crewWrapper">
+            <div className="crewC"></div>
+            <p>隊員C</p>
+          </div>
         </div>
       </div>
     </div>

@@ -34,11 +34,19 @@
     rgba(9, 6, 17, 1) 100%
   );
 }
+
 @media screen and (max-width: 1280px) {
   .worksBg {
     height: 120vh;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .worksBg {
+    height: 160vh;
+  }
+}
+
 .title {
   color: #fff;
   font-family: "Abril Fatface", sans-serif;
@@ -46,10 +54,172 @@
   font-weight: 400;
   background: none;
   margin: 0 5%;
-  padding: 5rem 0;
+  padding-top: 5rem;
+  /* border: #fff 1px solid; */
 }
+
+/* ここから宇宙のレイアウト */
 .planetWrapper {
-  height: 70rem;
-  margin: 0 5%;
-  border: #fff 1px solid;
+  /* border: #fff 1px solid; */
+  background-color: rgba(255, 255, 255, 0);
+  height: auto;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* 縦 */
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3rem);
+  }
+}
+/* 横 */
+@keyframes floatX {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(2rem);
+  }
+}
+
+.planet {
+  background-color: rgba(255, 255, 255, 0);
+  width: 33.333%;
+  height: 23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  will-change: transform;
+  animation: floatY 3s ease-in-out infinite alternate,
+    floatX 4s ease-in-out infinite alternate;
+}
+
+.planet a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.planetImage {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 15rem;
+  height: 15rem;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+
+.planetImage:hover {
+  transform: scale(1.1);
+}
+
+/* 各惑星の画像設定 */
+.mercury {
+  background-image: url("/partImg/mercury.png");
+  bottom: 0;
+  right: 15%;
+}
+
+.venus {
+  background-image: url("/partImg/venus.png");
+  top: 0;
+}
+
+.earth {
+  background-image: url("/partImg/earth.png");
+  bottom: 0;
+  left: 15%;
+}
+
+.neptune {
+  background-image: url("/partImg/neptune.png");
+  left: 0;
+}
+
+.me {
+  background-image: url("/partImg/me.png");
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.mars {
+  background-image: url("/partImg/mars.png");
+  right: 0;
+}
+
+.heavenlyStar {
+  background-image: url("/partImg/heavenlyStar.png");
+  top: 0;
+  right: 15%;
+}
+
+.saturn {
+  background-image: url("/partImg/saturn.png");
+  bottom: 0;
+}
+
+.jupiter {
+  background-image: url("/partImg/jupiter.png");
+  top: 0;
+  left: 15%;
+}
+
+/* 1040px以下の時 */
+@media screen and (max-width: 1040px) {
+  .planetImage {
+    background-size: 90%;
+  }
+}
+
+/* 768px以下の時 */
+/* 宇宙じゃなくて作品そのまま表示させる方がいいかも */
+@media screen and (max-width: 768px) {
+  .title {
+    padding: 5rem 0;
+  }
+  .planetWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .planet {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .planetImage {
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: static;
+  }
+
+  /* .me だけ2列分の幅を取る */
+  .me {
+    grid-column: span 2;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+  }
 }

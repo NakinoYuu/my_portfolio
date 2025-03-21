@@ -10,7 +10,6 @@ export default function HomeAbout() {
       <div className=" aboutContent">
         <div className="details">
           <div className="myPhoto">{/* 自分の画像何かしら描いて入れる */}</div>
-          <div className="gap"></div>
           <div className="selfIntroduction">
             <p>名　前 : 中野優(隊長)</p>
             <p>誕生日 : 2004年4月11日</p>
@@ -24,7 +23,6 @@ export default function HomeAbout() {
         <Link href="/about/">
           <button className="more">{/* ロケットの画像入れる */}</button>
         </Link>
-        {/* ↑Aboutいくしリンクか？ */}
       </div>
     </div>
   );

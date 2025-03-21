@@ -20,7 +20,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="about">
-          <Link href="/">
+          <Link href="/about/">
             <div className="rhombusShape">
               <div className="headerTitle">
                 <button>About</button>
