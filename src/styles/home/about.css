@@ -18,7 +18,7 @@
   justify-content: center;
   /* border: #fff 1px solid; */
   margin: 0 5%;
-  padding: 2% 0 10% 0;
+  padding: 4% 0 10% 0;
 }
 .aboutContent .details {
   width: auto;
@@ -37,11 +37,23 @@
   height: 44.9rem;
   margin: 0 auto;
   /* border: #fff 1px solid; */
+  animation: floatAnimation 5s infinite ease-in-out;
 }
 
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .selfIntroduction {
   margin: 10rem 0;
-  padding: 2rem 10rem;
+  padding: 2rem 13rem;
   /* border: #fff 1px solid; */
 }
 @media screen and (max-width: 768px) {

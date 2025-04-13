@@ -5,7 +5,7 @@ import "@/styles/Components/works/backToAllWorks.css";
 export default function BackToAllWorks() {
   return (
     <div className="backToAllWorksBg">
-      <Link href="/">
+      <Link href="/#homeWorks">
         <button className="backToAllWorks">
           <p>作品一覧へ戻る</p>
         </button>

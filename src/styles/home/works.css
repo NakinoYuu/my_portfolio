@@ -63,7 +63,7 @@
   /* border: #fff 1px solid; */
   background-color: rgba(255, 255, 255, 0);
   height: auto;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -97,8 +97,16 @@
   align-items: center;
   position: relative;
   will-change: transform;
+}
+
+.planet:not(.me) {
   animation: floatY 3s ease-in-out infinite alternate,
     floatX 4s ease-in-out infinite alternate;
+}
+
+/* "me" だけ Y 軸のアニメーションに固定 */
+.planet.me {
+  animation: floatY 3s ease-in-out infinite alternate !important;
 }
 
 .planet a {
@@ -107,7 +115,6 @@
   align-items: center;
   background-color: rgba(255, 255, 255, 0);
 }
-
 .planetImage {
   display: inline-block;
   background-repeat: no-repeat;
@@ -147,14 +154,21 @@
   left: 0;
 }
 
+/* キャラクター画像 */
 .me {
-  background-image: url("/partImg/me.png");
   display: inline-block;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(255, 255, 255, 0);
 }
 
+/* デフォルトキャラクターのスタイル */
+.me.default {
+  background-image: url("/partImg/me.png");
+}
 .mars {
   background-image: url("/partImg/mars.png");
   right: 0;
@@ -185,7 +199,6 @@
 }
 
 /* 768px以下の時 */
-/* 宇宙じゃなくて作品そのまま表示させる方がいいかも */
 @media screen and (max-width: 768px) {
   .title {
     padding: 5rem 0;
@@ -222,4 +235,7 @@
     align-items: center;
     margin: 2rem 0;
   }
+}
+.planetImage.visited {
+  opacity: 0.5;
 }

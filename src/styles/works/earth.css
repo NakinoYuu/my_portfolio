@@ -1,0 +1,36 @@
+.appHome {
+  background-image: url("/partImg/home.png");
+}
+.appShopping {
+  background-image: url("/partImg/shopping.png");
+}
+.appKeep {
+  background-image: url("/partImg/keep.png");
+}
+.appKeepDetails {
+  background-image: url("/partImg/keepDetails.png");
+}
+.appMenu {
+  background-image: url("/partImg/menu.png");
+}
+.appPost {
+  background-image: url("/partImg/post.png");
+}
+.appMessage {
+  background-image: url("/partImg/Message.png");
+}
+.appPostComplete {
+  background-image: url("/partImg/postComplete.png");
+}
+.appMyPage {
+  background-image: url("/partImg/myPage.png");
+}
+.appProfile {
+  background-image: url("/partImg/profile.png");
+}
+.appTrade {
+  background-image: url("/partImg/trade.png");
+}
+.appTradeComplete {
+  background-image: url("/partImg/tradeComplete.png");
+}

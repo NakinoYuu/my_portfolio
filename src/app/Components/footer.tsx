@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import "@/styles/Components/footer.css";
 
 export default function Footer() {
@@ -11,7 +10,16 @@ export default function Footer() {
         <div className="gap">{/* 横は121rem */}</div>
         <div className="detailsWrapper">
           <div className="details">
-            <p className="eMail">jump0411yuu@gmail.com</p>
+            {/* <p className="eMail">jump0411yuu@gmail.com</p> */}
+            <p className="eMail">
+              <a
+                className="eMail"
+                href="mailto:jump0411yuu@gmail.com?subject=お問い合わせ&body=”中野優”にご興味を持っていただき、ありがとうございます！ご質問等お気軽にお申し付けください！"
+              >
+                jump0411yuu@gmail.com
+              </a>
+            </p>
+
             <div className="starImg"></div>
             <p className="comment">ご質問などお気軽にお問い合わせください。</p>
           </div>
@@ -24,7 +32,7 @@ export default function Footer() {
         <div className="linkWrapper">
           <div className="contentLink">
             <div className="footerLink">
-              <Link href="/">
+              <Link href="/#homeWorks">
                 <button>Works</button>
               </Link>
             </div>
@@ -41,7 +49,6 @@ export default function Footer() {
           </div>
           <div className="toTopContent">
             <Link href="/">
-              {/* メールがそのまま書けるようにする */}
               <button className="toTop">{/* ロケットの画像入れる */}</button>
             </Link>
           </div>

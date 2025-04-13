@@ -1,3 +1,5 @@
+/* メモ */
+/* アニメーションつける */
 * {
   padding: 0;
   margin: 0;
@@ -32,6 +34,7 @@
   }
 }
 /* タイトル */
+/* 変更なし */
 .worksFvBg h1 {
   color: #fff;
   font-family: "Abril Fatface";
@@ -54,6 +57,7 @@
   }
 }
 /* 作品サムネ */
+/* 変更なし */
 .worksFvContent {
   /* border: #fff 1px solid; */
   width: 100%;
@@ -85,12 +89,15 @@
   }
 }
 /* この下にFVの画像入れていく */
-/* 水星 */
-.WorksThumbnail,
-.mercuryThumbnail {
+/* 設定自体は変更なし。それぞれの画像をそれぞれのcssで入れるだけ */
+
+/* 水星 見本*/
+/* .mercuryThumbnail {
   background-image: url("/partImg/WorksThumbnail.png");
-}
+} */
+
 /* 作品名 */
+/* 変更なし */
 .worksFvContent h2 {
   color: #fff;
   font-family: "Kaisei Decol";
@@ -112,22 +119,24 @@
   }
 }
 /* 作品概要 */
+/* 変更なし */
 .worksOverviewWrapper {
-  width: 56%;
+  width: 65%;
   margin: 0 auto;
 }
 .overviewDescription {
   color: #fff;
   font-family: "Yu Mincho StdN";
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 3rem;
-  letter-spacing: 0.2rem;
-  margin: 5rem 0 10rem 0;
+  letter-spacing: 0.3rem;
+  margin: 7rem 0 13rem 0;
+  border-bottom: solid #fff 1px;
+  padding-bottom: 7rem;
 }
 .worksOverview {
   display: flex;
-  margin-bottom: 5.2rem;
 }
 
 .worksOverview .headline {
@@ -137,7 +146,7 @@
   border-bottom: solid #fff 1px;
   color: #fff;
   font-family: "Yu Mincho StdN";
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
   text-align: center;
   line-height: 4rem;
@@ -145,9 +154,33 @@
 .worksOverview .details {
   color: #fff;
   font-family: "Yu Mincho StdN";
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 700;
+  margin-bottom: 10rem;
+  background: none;
+}
+p.details {
   margin-left: 8rem;
+}
+a.details {
+  position: relative;
+  text-decoration: underline;
+  color: inherit;
+}
+
+a.details::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 1px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.5s ease;
+}
+
+a.details:hover::after {
+  width: 100%;
 }
 @media screen and (max-width: 1280px) {
   .overviewDescription {
@@ -159,10 +192,17 @@
   }
   .worksOverview .details {
     font-size: 1.6rem;
-    margin-left: 6rem;
+  }
+  a.details::after {
+    bottom: -3px;
   }
 }
 @media screen and (max-width: 768px) {
+  .overviewDescription {
+    border-bottom: none;
+    padding-bottom: 0rem;
+    padding-top: 3rem;
+  }
   .worksOverviewWrapper {
     width: 85%;
   }
@@ -170,7 +210,8 @@
     display: flex;
     flex-flow: column;
     margin: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
+    border-bottom: #fff solid 1px;
   }
 
   .overviewDescription {
@@ -179,18 +220,38 @@
   .worksOverview .headline {
     width: 100%;
     font-size: 1.4rem;
-  }
-  .worksOverview .details {
-    width: 90%;
-    font-size: 1.4rem;
     padding-top: 1rem;
-    padding-bottom: 5rem;
+    border-bottom: none;
+  }
+
+  .worksOverview .details {
+    width: 95%;
+    font-size: 1.4rem;
+    padding: 2rem 0;
     margin: 0 auto;
-    /* border: #fff solid 1px; */
+  }
+  a.details::after {
+    bottom: 15px;
   }
 }
 /* 作品自体の写真 */
 /* webサイト */
+/* 全体のレイアウト */
+/* 設定自体は変更なし。それぞれの数値や画像をそれぞれのcssで入れるだけ */
+
+.workSiteImgWrapper {
+  width: 100%;
+  padding: 25rem 0;
+  display: block; /* flexからblockに変更 */
+  text-align: center;
+}
+
+.workSiteImgContent {
+  width: 85%;
+  margin: 0 auto; /* 中央寄せ */
+  display: block; /* flexからblockに変更 */
+}
+
 .workSiteImgWrapper {
   /* border: #fff solid 1px; */
   width: 100%;
@@ -215,7 +276,7 @@
 }
 .PcImg {
   /* border: #d10a0a solid 1px; */
-  width: 50%;
+  width: 60%;
   height: auto;
   background-size: 100%;
   background-position: top;
@@ -224,7 +285,7 @@
 }
 .SpImg {
   /* border: #6a24d4 solid 1px; */
-  width: 40%;
+  width: 30%;
   height: auto;
   background-size: 100%;
   background-position: top;
@@ -248,7 +309,7 @@
     margin-bottom: 10rem;
   }
   .SpImg {
-    width: 80%;
+    width: 70%;
   }
 }
 @media screen and (max-width: 400px) {
@@ -261,9 +322,10 @@
   }
 }
 /* それぞれの写真とかその他の設定 */
+/* 設定自体は変更なし。それぞれ数値や画像をそれぞれのcssで入れるだけ */
 
-/* 水星 */
-.mercuryPcImg {
+/* 水星見本 */
+/* .mercuryPcImg {
   background-image: url("/partImg/pcImg.jpg");
 }
 
@@ -271,48 +333,55 @@
   background-image: url("/partImg/spImg.jpg");
 }
 .mercuryContent {
-  min-height: 510rem;
+  height: 380rem;
 }
 @media screen and (max-width: 1280px) {
   .mercuryContent {
-    min-height: 405rem;
+    height: 303rem;
   }
 }
 
 @media screen and (max-width: 950px) {
+  .mercuryContent {
+    height: auto;
+  }
+
   .mercuryPcImg {
-    min-height: 345rem;
+    height: 343rem;
   }
   .SpImg {
-    min-height: 450rem;
+    height: 450rem;
   }
 }
 @media screen and (max-width: 768px) {
+  .mercuryContent {
+    height: auto;
+  }
+
   .mercuryPcImg {
-    min-height: 280rem;
+    height: 277rem;
   }
   .SpImg {
-    min-height: 485rem;
+    height: 424rem;
   }
 }
 @media screen and (max-width: 400px) {
+  .mercuryContent {
+    height: auto;
+  }
+
   .mercuryPcImg {
-    min-height: 157rem;
+    height: 161rem;
   }
   .SpImg {
-    min-height: 344rem;
+    height: 352rem;
   }
-}
-/* 金星 */
-/* 地球 */
-/* 火星 */
-/* 木星 */
-/* 土星 */
-/* 天王星 */
-/* 海王星 */
+} */
 
 /* 作品自体の写真 */
 /* バナー */
+/* 設定自体は変更なし。それぞれ数値や画像をそれぞれのcssで入れるだけ */
+
 .bannerImgWrapper {
   display: flex;
   justify-content: space-around;
@@ -379,20 +448,103 @@
 }
 
 /* それぞれの写真とかその他の設定 */
-/* 水星 */
-.mercuryBannerImgLeft {
+/* 設定自体は変更なし。それぞれ数値や画像をそれぞれのcssで入れるだけ */
+
+/* 水星見本 */
+/* .mercuryBannerImgLeft {
   background-image: url("/partImg/bannerImg1.jpg");
 }
 .mercuryBannerImgRight {
   background-image: url("/partImg/bannerImg2.jpg");
-}
-/* 金星 */
-/* 地球 */
-/* 火星 */
-/* 木星 */
-/* 土星 */
-/* 天王星 */
-/* 海王星 */
+} */
 
-/* メモ */
-/* 今やってたのは、webサイト系のサイズ調節。次はレスポンシブした時にできる下の隙間を無くして解決する。 */
+/* 作品自体の写真 */
+/* アプリ */
+.applicationImgWrapper {
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  padding: 25rem 0;
+  margin: 0 auto;
+}
+.applicationImg {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-bottom: 20rem;
+}
+.app {
+  width: 27rem;
+  height: 52rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 3rem 0;
+}
+.applicationImgWrapper p {
+  font-size: 2.6rem;
+  color: #fff;
+  font-family: "Yu Mincho StdN";
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+/* スマホサイズ */
+@media screen and (max-width: 768px) {
+  .applicationImg {
+    margin-bottom: 5rem;
+  }
+
+  .applicationImgWrapper p {
+    font-size: 2.2rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* 小さいスマホサイズ */
+@media screen and (max-width: 400px) {
+  .applicationImgWrapper p {
+    font-size: 2rem;
+    padding-bottom: 0;
+  }
+}
+
+/* 地球見本 */
+/* .appHome {
+  background-image: url("/partImg/home.png");
+}
+.appShopping {
+  background-image: url("/partImg/shopping.png");
+}
+.appKeep {
+  background-image: url("/partImg/keep.png");
+}
+.appKeepDetails {
+  background-image: url("/partImg/keepDetails.png");
+}
+.appMenu {
+  background-image: url("/partImg/menu.png");
+}
+.appPost {
+  background-image: url("/partImg/post.png");
+}
+.appMessage {
+  background-image: url("/partImg/Message.png");
+}
+.appPostComplete {
+  background-image: url("/partImg/postComplete.png");
+}
+.appMyPage {
+  background-image: url("/partImg/myPage.png");
+}
+.appProfile {
+  background-image: url("/partImg/profile.png");
+}
+.appTrade {
+  background-image: url("/partImg/trade.png");
+}
+.appTradeComplete {
+  background-image: url("/partImg/tradeComplete.png");
+} */

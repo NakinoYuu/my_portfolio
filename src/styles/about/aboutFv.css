@@ -1,12 +1,29 @@
 .aboutFvBg {
-  background-image: url("/bgImg/Galaxy.jpg");
+  position: relative;
   width: 100%;
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
+  overflow: hidden;
 }
+@media screen and (max-width: 1280px) {
+  .aboutFvBg {
+    height: 130vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutFvBg {
+    height: 150vh;
+  }
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .aboutFvBg::before {
   content: "";
   position: absolute;
@@ -19,19 +36,30 @@
     rgba(9, 6, 17, 0) 0%,
     rgba(9, 6, 17, 1) 100%
   );
-}
-@media screen and (max-width: 1280px) {
-  .aboutFvBg {
-    height: 130vh;
-  }
+  z-index: 1;
 }
 
 .aboutFvContent {
-  /* border: #fff 1px solid; */
   width: 85%;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0);
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 2s ease-out 0.7s forwards;
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .aboutFvBg h1 {
   color: #fff;
   font-family: "Abril Fatface";
@@ -40,6 +68,7 @@
   background-color: rgba(255, 255, 255, 0);
   padding-top: 12rem;
 }
+
 @media screen and (max-width: 768px) {
   .aboutFvBg h1 {
     font-size: 4rem;
@@ -48,8 +77,6 @@
 }
 
 .selfIntroductionWrapper {
-  /* border: #fff 1px solid; */
-
   display: flex;
   flex-wrap: wrap;
   background: none;
@@ -57,14 +84,8 @@
   align-items: center;
   justify-content: center;
 }
-@media screen and (max-width: 768px) {
-  .selfIntroductionWrapper {
-    margin-top: 3rem;
-  }
-}
 
 .myPictureWrapper {
-  /* border: #fff 1px solid; */
   position: relative;
   background: none;
   margin: 0 auto;
@@ -80,29 +101,26 @@
   height: 42rem;
   background-color: rgba(255, 255, 255, 0);
 }
+
 .mbti {
   background-image: url("/partImg/mbti.png");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 15rem;
-  height: 15rem;
+  width: 16rem;
+  height: 16rem;
   position: absolute;
   right: 0rem;
   bottom: 0rem;
   background-color: rgba(255, 255, 255, 0);
+  animation: rotateInfinite 10s linear infinite;
 }
-/* ↑常にクルクル回転させる。また画像ちゃんと入れた時に回転さすコードも書く */
-@media screen and (max-width: 768px) {
-  .myPictureWrapper {
-    width: 38rem;
-    height: 38rem;
+
+@keyframes rotateInfinite {
+  from {
+    transform: rotate(0deg);
   }
-  .myPicture {
-    height: 37rem;
-  }
-  .mbti {
-    width: 13rem;
-    height: 13rem;
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -121,11 +139,13 @@
   line-height: 3rem;
   letter-spacing: 0.1rem;
 }
+
 .sentenceWrapper .RomaAlphabet {
   font-size: 1.4rem;
   line-height: normal;
   letter-spacing: normal;
 }
+
 .sentenceWrapper .ChineseCharacters {
   font-size: 3.6rem;
   margin-bottom: 2rem;
@@ -133,9 +153,11 @@
   line-height: normal;
   letter-spacing: normal;
 }
+
 .sentenceWrapper :nth-child(3) {
   margin-bottom: 5rem;
 }
+
 @media screen and (max-width: 768px) {
   .sentenceWrapper {
     margin-top: 10%;

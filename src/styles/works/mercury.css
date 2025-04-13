@@ -1,0 +1,61 @@
+/* 水星 */
+/* サムネ画像差し替える */
+.mercuryThumbnail {
+  background-image: url("/partImg/WorksThumbnail.png");
+}
+/* 作品写真設定など */
+.mercuryPcImg {
+  background-image: url("/partImg/pcImg.jpg");
+}
+
+.mercurySpImg {
+  background-image: url("/partImg/spImg.jpg");
+}
+.mercuryContent {
+  height: 380rem;
+}
+@media screen and (max-width: 1280px) {
+  .mercuryContent {
+    height: 303rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .mercuryContent {
+    /* height: 824rem; */
+    height: auto;
+  }
+
+  .mercuryPcImg {
+    height: 343rem;
+  }
+  .SpImg {
+    height: 450rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mercuryContent {
+    /* height: 712rem; */
+    height: auto;
+  }
+
+  .mercuryPcImg {
+    height: 277rem;
+  }
+  .SpImg {
+    height: 424rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mercuryContent {
+    /* height: 500rem; */
+    height: auto;
+  }
+
+  .mercuryPcImg {
+    height: 161rem;
+  }
+  .SpImg {
+    height: 352rem;
+  }
+}

@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import "@/styles/about/aboutFv.css";
+
 export default function AboutFv() {
   return (
     <div className="aboutFvBg">
+      <video className="bgVideo" autoPlay loop muted>
+        <source src="/videos/fvVideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="aboutFvContent">
         <h1>About</h1>
         <div className="selfIntroductionWrapper">
@@ -13,7 +17,7 @@ export default function AboutFv() {
             <div className="mbti">{/* mbtiの画像入れる */}</div>
           </div>
           <div className="sentenceWrapper">
-            <p className="RomaAlphabet">Yu　Nakano</p>
+            <p className="RomaAlphabet">Yu Nakano</p>
             <p className="ChineseCharacters">中野優</p>
             <p>何かに没頭している時間や、人と関わることが大好きな20歳です♪</p>
             <p>

@@ -43,25 +43,69 @@
 .crewB,
 .crewC {
   background-image: url("/partImg/yu.png");
-  /* ↑後で自分で描いたイラストに変える。それに伴って、bgsとかも変えて。 */
+  background-size: 70%;
+  /* ↑これは後で消す。下のコードに後で自分で描いたイラストに変える。それに伴って、bgsとかも変えて。 */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 70%;
   width: 40rem;
   height: 40rem;
   margin: 5% 0;
   background-color: rgba(255, 255, 255, 0);
   z-index: 5;
 }
+/* .crewA {
+  background-image: url("/partImg/.png");
+    background-size: ?%;
+
+}
+.crewB {
+  background-image: url("/partImg/.png");
+    background-size: ?%;
+
+}
+.crewC {
+  background-image: url("/partImg/.png");
+    background-size: ?%;
+
+} */
 .crewA:hover,
 .crewB:hover,
 .crewC:hover {
   background-size: 75%;
   transition: 0.3s ease-in;
 }
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes moveDownUp {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+.crewA,
+.crewC {
+  animation: moveUpDown 2s infinite ease-in-out;
+}
+
+.crewB {
+  animation: moveDownUp 3s infinite ease-in-out;
+}
+
 .crewA {
   /* border: #fff 1px solid; */
-
   transform: rotate(-10deg);
 }
 @media screen and (max-width: 768px) {
@@ -75,7 +119,6 @@
 }
 .crewC {
   /* border: #fff 1px solid; */
-
   transform: rotate(10deg);
 }
 @media screen and (max-width: 768px) {

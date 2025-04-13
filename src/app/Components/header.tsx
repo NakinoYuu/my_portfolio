@@ -11,7 +11,7 @@ export default function Header() {
       </Link>
       <nav className="navigationBar">
         <div className="works">
-          <Link href="/">
+          <Link href="/#homeWorks">
             <div className="rhombusShape">
               <div className="headerTitle">
                 <button>Works</button>
@@ -29,13 +29,13 @@ export default function Header() {
           </Link>
         </div>
         <div className="contact">
-          <Link href="/">
+          <a href="mailto:jump0411yuu@gmail.com?subject=お問い合わせ&body=”中野優”にご興味を持っていただき、ありがとうございます！ご質問等お気軽にお申し付けください！">
             <div className="rhombusShape">
               <div className="headerTitle">
                 <button>Contact</button>
               </div>
             </div>
-          </Link>
+          </a>
         </div>
       </nav>
     </div>
