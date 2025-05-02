@@ -1,3 +1,6 @@
+"use client";
+import { useEffect } from "react";
+
 import Header from "../../Components/header";
 import WorksFvBg from "../../Components/works/worksFvBg";
 import BackToAllWorks from "../../Components/works/backToAllWorks";
@@ -7,6 +10,27 @@ import "@/styles/works/styles.css";
 import "@/styles/works/venus.css";
 
 export default function Venus() {
+  useEffect(() => {
+    const targets = document.querySelectorAll(".fade-slide-up");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    targets.forEach((target) => observer.observe(target));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="venusPage">
       <Header />
@@ -22,11 +46,11 @@ export default function Venus() {
       </div>
       {/* 作品のサムネ写真と作品名入れる */}
       <div className="worksOverviewWrapper">
-        <p className="overviewDescription">
+        <p className="overviewDescription fade-slide-up">
           クライアントさまから「歴史の堅苦しいイメージを払拭しながら、『歴てく』の魅力を知ってもらい、最終的にツアーの予約につなげたい」というご要望を受け、サイトを制作しました。
           クライアントさまのご要望を元に私たちのチームで決めたコンセプトは、【1.歴てくに安心感や信頼を感じてもらえるようにする】【2.歴史を堅苦しいものと感じさせないカジュアルさを取り入れる】です。
         </p>
-        <div className="worksOverviewContent">
+        <div className="worksOverviewContent fade-slide-up">
           <div className="worksOverview">
             <p className="headline">閲覧</p>
             <p className="details">
@@ -36,7 +60,7 @@ export default function Venus() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                デザインを見る
+                Figmaでデザインを見る
               </a>
               <br />
               <a
@@ -45,7 +69,7 @@ export default function Venus() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                サイトを見る(サイト閉じてるからリンクない。先生に聞く)
+                サイトを見る(ただいま、クライアント様の都合によりサイトを閉鎖中でご覧いただけません。申し訳ございません。)
               </a>
             </p>
           </div>
@@ -126,7 +150,7 @@ export default function Venus() {
       </div>
       {/* 作品自体の写真(PDF)など掲載。下記のどちらか選択して使わない方コメント */}
       {/* webサイト系。星の名前あるとこクラス名それぞれ変更 */}
-      <div className="workSiteImgWrapper">
+      <div className="workSiteImgWrapper fade-slide-up">
         <div className="workSiteImgContent venusContent">
           <div className="PcImg venusPcImg"></div>
           <div className="SpImg venusSpImg"></div>

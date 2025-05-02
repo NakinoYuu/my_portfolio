@@ -1,0 +1,25 @@
+.neptuneThumbnail {
+  background-image: url("/partImg/businessCardNoBg.png");
+  padding-right: 13%;
+}
+.neptuneBusinessCardImgFront {
+  background-image: url("/partImg/businessCardImgFront.jpg");
+}
+.neptuneBusinessCardImgBack {
+  background-image: url("/partImg/businessCardImgBack.jpg");
+}
+.neptuneMockUpImg {
+  background-image: url("/partImg/BusinessCardMockUp.jpg");
+}
+.businessCardImg p {
+  color: #fff;
+  font-family: "Yu Mincho StdN";
+  font-size: 1.6rem;
+  background: none;
+  margin: 0 auto;
+}
+@media screen and (max-width: 400px) {
+  .businessCardImg p {
+    font-size: 1.2rem;
+  }
+}

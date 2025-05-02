@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 import Header from "../../Components/header";
 import WorksFvBg from "../../Components/works/worksFvBg";
 import BackToAllWorks from "../../Components/works/backToAllWorks";
@@ -7,6 +9,26 @@ import "@/styles/works/styles.css";
 import "@/styles/works/earth.css";
 
 export default function Earth() {
+  useEffect(() => {
+    const targets = document.querySelectorAll(".fade-slide-up");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    targets.forEach((target) => observer.observe(target));
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className="earthPage">
       <Header />
@@ -22,11 +44,11 @@ export default function Earth() {
       </div>
       {/* 作品概要 */}
       <div className="worksOverviewWrapper">
-        <p className="overviewDescription">
+        <p className="overviewDescription fade-slide-up">
           セルフネイルやネイルアートに興味を持つ方々に向けて、「セルフネイルの世界を繋ぐ」をテーマとしたサブスクリプション型のアプリを制作しました。
           【デザインの収集】【気になる商品の購入】【デザインを参考にしながらセルフネイルをする】【完成したセルフネイルの投稿】まで、セルフネイルに関わる体験をすべてこのアプリ内で完結できるよう設計しました。
         </p>
-        <div className="worksOverviewContent">
+        <div className="worksOverviewContent fade-slide-up">
           <div className="worksOverview">
             <p className="headline">閲覧</p>
             <p className="details">
@@ -36,14 +58,17 @@ export default function Earth() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                デザインを見る
+                Figmaでデザインを見る
               </a>
             </p>
           </div>
 
           <div className="worksOverview">
             <p className="headline">種類</p>
-            <p className="details">習作</p>
+            <p className="details">
+              習作(チーム制作) <br />
+              【担当】デザイン
+            </p>
           </div>
           <div className="worksOverview">
             <p className="headline">内容</p>
@@ -67,7 +92,7 @@ export default function Earth() {
           <div className="worksOverview">
             <p className="headline">情報設計</p>
             <p className="details">
-              本アプリは、「自分に合った距離感と使い方でアプリを楽しめる」ことを軸に、「共有」「シームレス」「ネットショッピング」の3つのキーワードをもとに情報設計を行いました。
+              「自分に合った距離感と使い方でアプリを楽しめる」ことを軸に、「共有」「シームレス」「ネットショッピング」の3つのキーワードをもとに情報設計を行いました。
               「閲覧 ▶︎ 保存・購入 ▶︎（実践）▶︎
               投稿」という一連の流れを自然につなげることで、ユーザーが迷わず目的を達成できるよう、画面遷移や操作性の一貫性を大切にしています。とくに閲覧機能では、使用されているアイテムの確認から保存・購入までをスムーズに行える導線を設計しました。
               投稿時には、コメントのON/OFFを選択できるようにし、「見てもらいたい」「記録として残したい」「技術を磨きたい」など、ユーザーのスタンスに応じた使い方ができるよう配慮。また、気になったユーザーと自然につながれるプロフィール交換機能を取り入れることで、心地よい距離感でのコミュニケーションも可能にしています。
@@ -87,7 +112,8 @@ export default function Earth() {
           <div className="worksOverview">
             <p className="headline">作成期間</p>
             <p className="details">
-              2ヶ月2週間(企画2週間、デザイン1ヶ月、コード1ヶ月)ここはまた修正
+              3ヶ月(企画2週間、デザイン1ヶ月、コード1ヶ月2週間) <br />
+              (友人が私のデザインに興味を持ってくれ、授業外で実装に取り組んでくれました。)
             </p>
           </div>
           <div className="worksOverview">
@@ -98,30 +124,31 @@ export default function Earth() {
       </div>
       {/* 作品自体の写真(PDF)など掲載。下記のどちらか選択して使わない方コメント */}
       {/* アプリ系。星の名前あるとこクラス名それぞれ変更*/}
-      <div className="applicationImgWrapper">
-        <p>閲覧・購入</p>
+      <div className="applicationImgWrapper fade-slide-up">
+        <p>閲覧・購入画面</p>
         <div className="applicationImg ">
-          <div className="app appHome"></div>
-          <div className="app appShopping"></div>
+          <div className="app appNpHome"></div>
+          <div className="app appNpConfirmation"></div>
+          <div className="app appNpShopping"></div>
         </div>
-        <p>保存</p>
+        <p>保存・メニュー画面</p>
         <div className="applicationImg ">
-          <div className="app appKeep"></div>
-          <div className="app appKeepDetails"></div>
-          <div className="app appMenu"></div>
+          <div className="app appNpKeep"></div>
+          <div className="app appNpKeepDetails"></div>
+          <div className="app appNpMenu"></div>
         </div>
-        <p>投稿</p>
+        <p>投稿画面</p>
         <div className="applicationImg ">
-          <div className="app appPost"></div>
-          <div className="app appMessage"></div>
-          <div className="app appPostComplete"></div>
+          <div className="app appNpPost"></div>
+          <div className="app appNpMessage"></div>
+          <div className="app appNpPostComplete"></div>
         </div>
-        <p>マイページ・プロフィール交換</p>
+        <p>マイページ・プロフィール交換画面</p>
         <div className="applicationImg ">
-          <div className="app appMyPage"></div>
-          <div className="app appProfile"></div>
-          <div className="app appTrade"></div>
-          <div className="app appTradeComplete"></div>
+          <div className="app appNpMyPage"></div>
+          <div className="app appNpProfile"></div>
+          <div className="app appNpTrade"></div>
+          <div className="app appNpTradeComplete"></div>
         </div>
       </div>
       <BackToAllWorks />

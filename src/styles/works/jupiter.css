@@ -1,0 +1,11 @@
+.jupiterThumbnail {
+  background-image: url("/partImg/chocolateNoBg.png");
+  padding-right: 15%;
+}
+
+.jupiterBannerImgLeft {
+  background-image: url("/partImg/chocolateDrinkaCheap.jpg");
+}
+.jupiterBannerImgRight {
+  background-image: url("/partImg/chocolateDrinkLuxury.jpg");
+}

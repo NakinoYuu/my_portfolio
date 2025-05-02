@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <div className="header">
       <Link href="/">
-        <div className="logo">{/* 画像？入れる */}</div>
+        <div className="logo">{/* 名刺と同じロゴ */}</div>
       </Link>
       <nav className="navigationBar">
         <div className="works">

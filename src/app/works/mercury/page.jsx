@@ -1,3 +1,6 @@
+"use client";
+import { useEffect } from "react";
+
 import Header from "../../Components/header";
 // import WorksFvBg from "../../Components/works/worksFvBg";
 import BackToAllWorks from "../../Components/works/backToAllWorks";
@@ -7,6 +10,27 @@ import "@/styles/works/styles.css";
 import "@/styles/works/mercury.css";
 
 export default function Mercury() {
+  useEffect(() => {
+    const targets = document.querySelectorAll(".fade-slide-up");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    targets.forEach((target) => observer.observe(target));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="mercuryPage">
       <Header />
@@ -22,10 +46,24 @@ export default function Mercury() {
       </div>
       {/* 作品概要 */}
       <div className="worksOverviewWrapper">
-        <p className="overviewDescription">
+        <p className="overviewDescription fade-slide-up">
           就職活動にあたり、ポートフォリオサイトを制作いたしました。ご覧いただく中で少しでも楽しさを感じていただけるよう、企画・デザイン・動きの細部にまでストーリー性や一貫性を持たせることを意識して取り組みました。
         </p>
-        <div className="worksOverviewContent">
+        <div className="worksOverviewContent fade-slide-up">
+          <div className="worksOverview">
+            <p className="headline">閲覧</p>
+            <p className="details">
+              <a
+                className="details"
+                href="https://www.figma.com/design/HTxU2BAcEKjToWx5Xfpx5h/portfolio3?node-id=0-1&t=xGKzT58KjXyonhsS-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Figmaでデザインを見る
+              </a>
+            </p>
+          </div>
+
           <div className="worksOverview">
             <p className="headline">種類</p>
             <p className="details">自主制作</p>
@@ -73,18 +111,12 @@ export default function Mercury() {
       </div>
       {/* 作品自体の写真(PDF)など掲載。下記のどちらか選択して使わない方コメント */}
       {/* webサイト系。星の名前あるとこクラス名それぞれ変更 */}
-      <div className="workSiteImgWrapper">
+      <div className="workSiteImgWrapper fade-slide-up">
         <div className="workSiteImgContent mercuryContent">
           <div className="PcImg mercuryPcImg"></div>
           <div className="SpImg mercurySpImg"></div>
         </div>
       </div>
-      {/* バナー系。星の名前あるとこクラス名それぞれ変更*/}
-      {/* <div className="bannerImgWrapper">
-        <div className="BannerImg mercuryBannerImgLeft"></div>
-        <div className="BannerImg mercuryBannerImgRight"></div>
-      </div> */}
-
       <BackToAllWorks />
       <Footer />
     </div>

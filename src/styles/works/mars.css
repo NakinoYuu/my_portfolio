@@ -1,0 +1,33 @@
+/* 火星 */
+.marsThumbnail {
+  background-image: url("/partImg/pomosutaNoBg.png");
+  padding-right: 15%;
+}
+.appPsMyPage {
+  background-image: url("/partImg/psMyPage.png");
+}
+.appPsGoal {
+  background-image: url("/partImg/psGoal.png");
+}
+.appPsTable {
+  background-image: url("/partImg/psTable.png");
+}
+.appPsRankingPage {
+  background-image: url("/partImg/psRankingPage.png");
+}
+.appPsRankingDetails {
+  background-image: url("/partImg/psRankingDetails.png");
+}
+.appPsTimer {
+  background-image: url("/partImg/psTimer.png");
+}
+.appPsMessageGood {
+  background-image: url("/partImg/psMessageGood.png");
+}
+
+.appPsMessageNormal {
+  background-image: url("/partImg/psMessageNormal.png");
+}
+.appPsMessageBad {
+  background-image: url("/partImg/psMessageBad.png");
+}

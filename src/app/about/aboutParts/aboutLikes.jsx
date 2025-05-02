@@ -72,7 +72,8 @@ export default function AboutLikes() {
           <div className="textDetailsWrapper">
             <p className="likesTitle">- カラオケ -</p>
             <p className="detailsText">
-              賑やかに楽しんだり、大声を出してストレス発散できちゃうカラオケが大好きです！普段スコアは流し見程度ですが、ゾロ目は初めて見たので気分が高鳴り、つい撮ってしまいました。笑
+              賑やかに楽しんだり、大声を出してストレス発散できru
+              カラオケが大好きです！普段スコアは流し見程度ですが、ゾロ目は初めて見たので気分が高鳴り、つい撮ってしまいました。笑
             </p>
           </div>
         </div>

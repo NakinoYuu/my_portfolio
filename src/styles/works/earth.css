@@ -1,36 +1,45 @@
-.appHome {
+/* 地球 */
+.earthThumbnail {
+  background-image: url("/partImg/nailPaletteNoBg.png");
+  padding-right: 15%;
+}
+
+.appNpHome {
   background-image: url("/partImg/home.png");
 }
-.appShopping {
+.appNpConfirmation {
+  background-image: url("/partImg/confirmation.png");
+}
+.appNpShopping {
   background-image: url("/partImg/shopping.png");
 }
-.appKeep {
+.appNpKeep {
   background-image: url("/partImg/keep.png");
 }
-.appKeepDetails {
+.appNpKeepDetails {
   background-image: url("/partImg/keepDetails.png");
 }
-.appMenu {
+.appNpMenu {
   background-image: url("/partImg/menu.png");
 }
-.appPost {
+.appNpPost {
   background-image: url("/partImg/post.png");
 }
-.appMessage {
+.appNpMessage {
   background-image: url("/partImg/Message.png");
 }
-.appPostComplete {
+.appNpPostComplete {
   background-image: url("/partImg/postComplete.png");
 }
-.appMyPage {
+.appNpMyPage {
   background-image: url("/partImg/myPage.png");
 }
-.appProfile {
+.appNpProfile {
   background-image: url("/partImg/profile.png");
 }
-.appTrade {
+.appNpTrade {
   background-image: url("/partImg/trade.png");
 }
-.appTradeComplete {
+.appNpTradeComplete {
   background-image: url("/partImg/tradeComplete.png");
 }

@@ -1,11 +1,7 @@
 /* 金星 */
-
-/* メモ */
-/* ・サムネ変更 */
-
 /* サムネ画像 */
 .venusThumbnail {
-  background-image: url("/partImg/WorksThumbnail.png");
+  background-image: url("/partImg/rekitekuNoBg.png");
 }
 
 /* 作品写真設定など */

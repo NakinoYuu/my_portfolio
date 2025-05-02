@@ -1,7 +1,7 @@
 /* 水星 */
-/* サムネ画像差し替える */
 .mercuryThumbnail {
-  background-image: url("/partImg/WorksThumbnail.png");
+  background-image: url("/partImg/portfolioNoBg.png");
+  padding-left: 8%;
 }
 /* 作品写真設定など */
 .mercuryPcImg {

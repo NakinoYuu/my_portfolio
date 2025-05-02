@@ -1,5 +1,16 @@
 /* メモ */
 /* アニメーションつける */
+/* styles.cssなどに記述 */
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+.fade-slide-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,6 +26,7 @@
   background-repeat: no-repeat;
   position: relative;
 }
+
 .worksFvBg::before {
   content: "";
   position: absolute;
@@ -88,6 +100,37 @@
     height: 45rem;
   }
 }
+/* 1. worksFvBgをふわっと表示（フェードイン＆スライドアップ） */
+.worksFvBg {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. WorksThumbnail はループアニメを遅延付きで開始 */
+.WorksThumbnail {
+  animation: floatUpDown 3s ease-in-out infinite;
+  animation-delay: 1.2s; /* worksFvBgのアニメと同じだけ遅らせる */
+}
+
+/* ふわふわ上下に動くアニメーション */
+@keyframes floatUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 /* この下にFVの画像入れていく */
 /* 設定自体は変更なし。それぞれの画像をそれぞれのcssで入れるだけ */
 
@@ -399,7 +442,14 @@ a.details:hover::after {
   aspect-ratio: 4 / 3;
   min-height: 70rem;
 }
-
+.bannerImgWrapper > .BannerImg:only-child {
+  width: 100%;
+  max-width: 70rem;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  margin: 0 auto;
+}
 /* タブレットサイズ */
 @media screen and (max-width: 1280px) {
   .bannerImgWrapper {
@@ -437,6 +487,9 @@ a.details:hover::after {
     flex-direction: column;
     padding: 5rem 0;
     /* border: #fff solid 1px; */
+  }
+  .bannerImgWrapper > .BannerImg:only-child {
+    height: 30rem;
   }
 
   .BannerImg {
@@ -494,26 +547,38 @@ a.details:hover::after {
 /* スマホサイズ */
 @media screen and (max-width: 768px) {
   .applicationImg {
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
+  }
+  .app {
+    margin: 2rem 0;
   }
 
   .applicationImgWrapper p {
     font-size: 2.2rem;
-    padding-bottom: 3rem;
+    padding-bottom: 0rem;
   }
 }
 
 /* 小さいスマホサイズ */
 @media screen and (max-width: 400px) {
+  .applicationImg {
+    margin-bottom: 7rem;
+  }
+  .app {
+    margin: 1rem 0;
+  }
   .applicationImgWrapper p {
     font-size: 2rem;
-    padding-bottom: 0;
+    padding-bottom: 1rem;
   }
 }
 
 /* 地球見本 */
 /* .appHome {
   background-image: url("/partImg/home.png");
+}
+  .appConfirmation{
+    background-image: url("/partImg/confirmation.png");
 }
 .appShopping {
   background-image: url("/partImg/shopping.png");
@@ -548,3 +613,169 @@ a.details:hover::after {
 .appTradeComplete {
   background-image: url("/partImg/tradeComplete.png");
 } */
+
+/* ロゴ・名刺 */
+.logoImgWrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding: 10rem 0 10rem 0;
+  background-color: #fff;
+  margin-top: 5rem;
+}
+.logoImg {
+  /* width: 100%; */
+  max-width: 100rem;
+  /* height: auto;  */
+  aspect-ratio: 100 / 50;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+/* 名刺 */
+.businessCardImgWrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 5rem;
+  /* margin-top: 5rem; */
+
+  background-color: none;
+}
+.businessCardImg {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 100 / 50;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+
+  background-color: none;
+}
+
+/* 作品自体の写真 */
+/* モックアップ ・名刺*/
+
+.MockUpImgWrapper,
+.businessCardImgWrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5rem 0 20rem 0;
+  width: 90%;
+  margin: 0 auto;
+}
+.businessCardImgWrapper {
+  padding-bottom: 5rem;
+}
+.MockUpImgWrapper > .MockUpImg:only-child {
+  width: 95%;
+  height: 60rem;
+  background-size: cover;
+  margin: 0 auto;
+}
+.MockUpTitle,
+.logoTitle,
+.businessCardTitle {
+  color: #fff;
+  font-family: "Yu Mincho StdN";
+  font-size: 2.4rem;
+  font-weight: 700;
+  background: none;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 20rem;
+}
+.MockUpImg,
+.businessCardImg {
+  background-image: url("/partImg/bannerImg.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 45%;
+  aspect-ratio: 4 / 3;
+  min-height: 40rem;
+}
+/* タブレットサイズ */
+@media screen and (max-width: 1280px) {
+  .MockUpImgWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .MockUpImgWrapper :nth-child(1) {
+    margin-bottom: 10rem;
+  }
+  .MockUpTitle,
+  .logoTitle,
+  .businessCardTitle {
+    font-size: 2.4rem;
+    margin-top: 20rem;
+    text-align: center;
+  }
+  .MockUpImg,
+  .businessCardImg {
+    width: 80%;
+    aspect-ratio: 4 / 3;
+    min-height: 60rem;
+  }
+}
+
+/* スマホサイズ */
+@media screen and (max-width: 768px) {
+  .MockUpImgWrapper {
+    flex-direction: column;
+    padding: 3rem 0 2rem 0;
+    /* border: #fff solid 1px; */
+  }
+  .MockUpImgWrapper :nth-child(1) {
+    margin-bottom: 0rem;
+  }
+  .MockUpTitle,
+  .logoTitle,
+  .businessCardTitle {
+    font-size: 2rem;
+    margin-top: 20rem;
+    text-align: center;
+  }
+
+  .MockUpImg,
+  .businessCardImg {
+    width: 90%;
+    aspect-ratio: 4 / 3;
+    min-height: 40rem;
+    /* border: #fff solid 1px; */
+  }
+}
+
+/* 小さいスマホサイズ */
+@media screen and (max-width: 400px) {
+  .MockUpImgWrapper {
+    flex-direction: column;
+    padding: 2rem 0 2rem 0;
+    /* border: #fff solid 1px; */
+  }
+  .MockUpImgWrapper :nth-child(1) {
+    margin-bottom: 2rem;
+  }
+  .MockUpTitle,
+  .logoTitle {
+    font-size: 1.6rem;
+    margin-top: 20rem;
+    text-align: center;
+  }
+  .businessCardTitle {
+    margin-top: 10rem;
+  }
+  .MockUpImg,
+  .businessCardImg {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 10rem;
+    /* border: #fff solid 1px; */
+  }
+  .MockUpImgWrapper > .MockUpImg:only-child {
+    height: 30rem;
+  }
+}

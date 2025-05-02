@@ -1,8 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import "@/styles/Components/footer.css";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="footerBg">
       <h2 className="title">Contact</h2>
@@ -10,7 +16,6 @@ export default function Footer() {
         <div className="gap">{/* 横は121rem */}</div>
         <div className="detailsWrapper">
           <div className="details">
-            {/* <p className="eMail">jump0411yuu@gmail.com</p> */}
             <p className="eMail">
               <a
                 className="eMail"
@@ -42,15 +47,13 @@ export default function Footer() {
               </Link>
             </div>
             <div className="footerLink">
-              <Link href="/">
+              <a href="mailto:jump0411yuu@gmail.com?subject=お問い合わせ&body=”中野優”にご興味を持っていただき、ありがとうございます！ご質問等お気軽にお申し付けください！">
                 <button>Contact</button>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="toTopContent">
-            <Link href="/">
-              <button className="toTop">{/* ロケットの画像入れる */}</button>
-            </Link>
+            <button className="toTop" onClick={scrollToTop}></button>
           </div>
         </div>
       </div>

@@ -1,0 +1,15 @@
+/* 天王星 */
+.heavenlyThumbnail {
+  background-image: url("/partImg/GelatoMareBusinessCard.png");
+  padding-left: 13%;
+}
+
+.heavenlyLogoImg {
+  background-image: url("/partImg/GelatoMareLogoSummary.jpg");
+}
+.heavenlyMockUpImgLeft {
+  background-image: url("/partImg/GelatoMareBusinessCard.png");
+}
+.heavenlyMockUpImgRight {
+  background-image: url("/partImg/GelatoMareSign.png");
+}

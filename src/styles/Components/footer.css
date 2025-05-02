@@ -67,6 +67,8 @@
 
 /* Email */
 .eMail {
+  position: relative;
+  z-index: 2;
   color: #fff;
   font-family: "Abril Fatface";
   font-size: 2.4rem;
@@ -77,6 +79,8 @@
 
 /* Star Image */
 .starImg {
+  position: relative;
+  z-index: 1;
   background-image: url("/partImg/starLine.png");
   background-repeat: no-repeat;
   background-size: auto;
